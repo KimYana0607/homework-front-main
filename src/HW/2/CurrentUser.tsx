@@ -1,8 +1,7 @@
 import { UserType } from './HW2';
-import {myFriendsType, usersType} from "./UserList2";
 
 type CurrentUserPropsType = {
-  user: myFriendsType // пропиши типизацию
+  user: UserType // пропиши типизацию
 };
 
 

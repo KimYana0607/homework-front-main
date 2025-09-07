@@ -2,26 +2,9 @@ import {CurrentUser} from './CurrentUser';
 import {UsersObjectType} from './HW2';
 
 export type UserList2PropsType = {
-	users: usersType // пропиши типизацию
-	filterUsers: any // пропиши типизацию
+	users: UsersObjectType // пропиши типизацию
+	filterUsers: () => void // пропиши типизацию
 };
-
-export type usersType = {
-    myFriends: myFriendsType[]
-}
-
-export type myFriendsType = {
-    id: string
-    name: string
-    age: number
-    address: addressType
-}
-
-type addressType = {
-    street: string
-    city: string
-}
-
 
 export const UserList2 = (props: UserList2PropsType) => {
 	return (

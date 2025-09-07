@@ -10,11 +10,11 @@ export type UserType = {
   id: number;
   name: string;
   age: number;
-  address: any; // пропиши типизацию
+  address: AddressType; // пропиши типизацию
 };
 
 export type UsersObjectType = {
-  myFriends: any; // пропиши типизацию
+  myFriends: UserType[]; // пропиши типизацию
 };
 
 export const HW2 = () => {
