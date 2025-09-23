@@ -1,14 +1,18 @@
+import {ChangeEvent, Dispatch, SetStateAction} from "react";
+
 type InputPropsType = {
-	currentText: any // НУЖНО ПРОТИПИЗИРОВАТЬ
-	setCurrentText: any // НУЖНО ПРОТИПИЗИРОВАТЬ
+	currentText: string // НУЖНО ПРОТИПИЗИРОВАТЬ
+	setCurrentText: Dispatch<SetStateAction<string>> // НУЖНО ПРОТИПИЗИРОВАТЬ
 };
 
 export const Input = (props: InputPropsType) => {
-	const onChangeHandler = (event: 'НУЖНО ПРОТИПИЗИРОВАТЬ') => {
+	const onChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
+        let newText = event.currentTarget.value;
+        props.setCurrentText(newText);
 		// НУЖНО ДОПИСАТЬ
 	};
 
-	// return (
-	//   <input id={'hw04-input'} type="text" value={props.currentText} onChange={onChangeHandler} />
-	// );
+	return (
+	  <input id={'hw04-input'} type="text" value={props.currentText} onChange={onChangeHandler}/>
+	);
 };
